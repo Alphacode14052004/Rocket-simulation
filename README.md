@@ -27,3 +27,69 @@ Rocket Simulation is an open-source project that simulates a rocket launch, show
    git clone https://github.com/Alphacode14052004/Rocket-simulation.git
    cd Rocket-simulation
 
+Configure the Project Using CMake
+
+Run the following command to configure the project:
+
+bash
+
+cmake ..
+
+Compile the Project
+
+After configuration, compile the project with:
+
+bash
+
+make
+
+Run the Simulation
+
+To run the simulation, execute:
+
+bash
+
+./rocket_simulator
+
+Usage
+
+After launching the simulation, you will see a visual representation of the rocket launching. The simulator includes clouds to indicate the rocket's ascent and a crash animation for demonstration purposes.
+Contributing
+
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+
+    Fork the repository.
+
+    Create a new branch for your feature or bug fix:
+
+    bash
+
+git checkout -b new-feature
+
+Commit your changes:
+
+bash
+
+git commit -m "Add new feature"
+
+Push to the branch:
+
+bash
+
+    git push origin new-feature
+
+    Create a pull request.
+
+License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+Acknowledgments
+
+    SDL2 for the graphics library.
+    Inspiration from various rocket simulation projects.
+
+Contact
+
+For any questions or feedback, please contact:
+
+Your Name - Your Email
