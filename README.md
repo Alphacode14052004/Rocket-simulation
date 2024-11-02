@@ -1,116 +1,63 @@
-# 🚀 Rocket Simulation
+# 🚀 2D Rocket Simulator
 
-A real-time physics-based rocket launch simulator that provides an educational and interactive way to understand rocket dynamics.
+A simple 2D rocket simulation that demonstrates basic physics concepts using SDL2.
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Platform](https://img.shields.io/badge/platform-Linux%20|%20Windows%20|%20Mac-lightgrey)
+## 📋 Features
 
-## 📋 Overview
+- **Vertical Flight Simulation**
+  - Real-time physics calculations including:
+    - Altitude-dependent gravity
+    - Atmospheric drag with exponential density decay
+    - Basic thrust mechanics
+    - Fuel consumption
+  
+- **Visual Elements**
+  - 2D rocket representation
+  - Static cloud backgrounds
+  - Fuel gauge
+  - Altitude display
+  - Crash animation with expanding explosion
 
-Rocket Simulation is an open-source educational tool that demonstrates the principles of rocket physics through interactive visualization. Watch as your rocket battles gravity, breaks through clouds, and (occasionally) experiences dramatic failures - all while learning about the fundamentals of aerospace dynamics.
+- **Physics Parameters**
+  - Initial mass: 500.0 kg
+  - Fuel burn rate: 2.5 kg/s
+  - Initial thrust: 15000.0 N
+  - Drag coefficient: 0.1
+  - Standard gravity: 9.81 m/s²
 
-## ✨ Features
+## 🛠️ Technical Requirements
 
-- **Physics Engine**: Real-time calculation of:
-  - Thrust dynamics
-  - Gravitational effects
-  - Atmospheric resistance
-- **Visual Elements**:
-  - Dynamic cloud systems
-  - Realistic launch sequences
-  - Interactive crash animations
-- **Cross-Platform Support**:
-  - Linux
-  - Windows
-  - macOS
+- SDL2 library
+- SDL2_ttf for text rendering
+- C compiler
+- TrueType font file (referenced as "your_font.ttf" in code)
 
-## 🛠️ Installation
+## 🎮 Controls
 
-### Prerequisites
+The simulation runs automatically after launch. Close the window to exit.
 
-Component | Minimum Version
-----------|----------------
-C Compiler (GCC or compatible) | 7.0+
-CMake | 3.10+
-SDL2 | 2.0.0+
+## 💻 Display
 
-### Build Steps
+- Window size: 800x600 pixels
+- Rocket position scaled (1:10 ratio for altitude display)
+- Real-time fuel and altitude indicators
 
-1. **Clone the Repository**
+## 🔧 Building the Project
+
+1. Ensure SDL2 and SDL2_ttf are installed
+2. Compile with:
    ```bash
-   git clone https://github.com/Alphacode14052004/Rocket-simulation.git
-   cd Rocket-simulation
+   gcc rocket_sim.c -o rocket_sim -lSDL2 -lSDL2_ttf -lm
+   ```
+3. Place a TrueType font file named "your_font.ttf" in the same directory
+4. Run the executable:
+   ```bash
+   ./rocket_sim
    ```
 
-2. **Create Build Directory**
-   ```bash
-   mkdir build
-   cd build
-   ```
+## 🔍 Technical Notes
 
-3. **Configure with CMake**
-   ```bash
-   cmake ..
-   ```
-
-4. **Compile**
-   ```bash
-   make
-   ```
-
-5. **Run the Simulator**
-   ```bash
-   ./rocket_simulator
-   ```
-
-## 🎮 Usage
-
-1. Launch the simulator using the executable
-2. Use the following controls:
-   - `SPACE`: Initiate launch
-   - `ESC`: Exit simulation
-   - `R`: Reset simulation
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how you can help:
-
-1. **Fork** the repository
-2. **Create** your feature branch
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. **Commit** your changes
-   ```bash
-   git commit -m 'Add amazing feature'
-   ```
-4. **Push** to your branch
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-5. Open a **Pull Request**
-
-Please ensure your PR adheres to:
-- Consistent coding style
-- Proper documentation
-- Appropriate test coverage
-
-## 📜 License
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
-
-## 👏 Acknowledgments
-
-- SDL2 development team for their excellent graphics library
-- The open-source community for inspiration and support
-
-## 📬 Contact
-
-For questions, suggestions, or collaboration:
-
-- **Email**: [your.email@example.com](jimvenkat999@gmail.com)
-- **GitHub**: [@Alphacode14052004](https://github.com/Alphacode14052004)
-
----
-
-*Built with ❤️ by the Rocket Simulation team*
+- Simulation uses fixed time steps of 0.1 seconds
+- Maximum simulation time: 300 seconds
+- Sea-level air density: 1.225 kg/m³
+- Exponential atmospheric density decay
